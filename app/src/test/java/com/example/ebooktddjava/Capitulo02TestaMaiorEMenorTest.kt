@@ -7,7 +7,7 @@ import com.example.ebooktddjava.capitulo02.Produto
 import org.junit.Assert
 import org.junit.Test
 
-class TestaMaiorEMenorTest {
+class Capitulo02TestaMaiorEMenorTest {
 
     @Test
     fun ordemDecrescente() {
