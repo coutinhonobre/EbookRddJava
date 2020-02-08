@@ -4,6 +4,7 @@ import com.example.ebooktddjava.capitulo03.ConversorDeNumeroRomano
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
+
 class Capitulo03ConversorDeNumeroRomanoTest {
 
     @Test
@@ -32,6 +33,34 @@ class Capitulo03ConversorDeNumeroRomanoTest {
         var romano = ConversorDeNumeroRomano()
         var numero = romano.converte("II")
         assertEquals(2, numero)
+    }
+
+    @Test
+    fun deveEntenderDoisSimbolosComoVI(){
+        var romano = ConversorDeNumeroRomano()
+        var numero = romano.converte("VI")
+        assertEquals(6, numero)
+    }
+
+    @Test
+    fun deveEntenderQuatroSimbolosDoisADoisComoXXII(){
+        var romano = ConversorDeNumeroRomano()
+        var numero = romano.converte("XXII")
+        assertEquals(22, numero)
+    }
+
+    @Test
+    fun deveEntenderNumerosComoIX(){
+        var romano = ConversorDeNumeroRomano()
+        var numero = romano.converte("IX")
+        assertEquals(9, numero)
+    }
+
+    @Test
+    fun deveEntenderNumerosComplexosComoXXIV() {
+        val romano = ConversorDeNumeroRomano()
+        val numero = romano.converte("XXIV")
+        assertEquals(24, numero)
     }
 
 }
